@@ -1,0 +1,265 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Open+Sans&family=Overpass:wght@300&family=Yanone+Kaffeesatz:wght@300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #ccc;
+  color: black;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Arial", sans-serif;
+}
+
+header {
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 25px 80px;
+}
+
+header .menu {
+  float: right;
+  margin-top: 5px;
+}
+
+header ul li {
+  display: inline-block;
+}
+
+header ul li a {
+  text-decoration: none;
+  font-size: 20px;
+  color: black;
+  margin: 0 25px;
+  font-weight: 300;
+  letter-spacing: 1px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+header ul li a:hover {
+  background-color: black;
+  color: white;
+  transition: 0.3s;
+}
+
+.content-nav {
+  max-width: 50%;
+  padding: 200px 80px 0;
+  color: black;
+}
+
+.content-nav h1 {
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.content-nav p {
+  font-size: 25px;
+  padding: 25px 0;
+  font-weight: 300;
+}
+
+.row {
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
+
+.container-main {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 15px;
+  margin-left: 13px;
+  margin-top: 12px;
+  font-size: 22px;
+  user-select: none;
+}
+
+.container-main input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: rgb(255, 255, 255);
+}
+
+.container-main:hover input ~ .checkmark {
+  background-color: black;
+  transition: 0.5s;
+}
+
+.container-main input:checked ~ .checkmark {
+  background-color: black;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container-main input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container-main .checkmark:after {
+  left: 10px;
+  top: 6.5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* Footer is CSSed here*/
+
+footer {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-flow: row wrap;
+  padding: 50px;
+  color: #fff;
+  background-color: gray;
+}
+
+.footer > * {
+  flex: 1 100%;
+}
+
+.footer-left {
+  margin-right: 1.25em;
+  margin-bottom: 2em;
+}
+
+.footer-left img {
+  width: 140px;
+  height: 70px;
+}
+
+.footer-h2 {
+  font-weight: 600;
+  font-size: 17px;
+}
+
+.footer ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.footer li {
+  line-height: 2em;
+}
+
+.footer a {
+  text-decoration: none;
+}
+
+.footer-right {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.footer-right > * {
+  flex: 1 50%;
+  margin-right: 1.25em;
+}
+
+.box a {
+  color: rgb(255, 255, 255);
+}
+
+.footer-bottom {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  padding-top: 50px;
+}
+
+.footer-left p {
+  padding-right: 20%;
+  color: black;
+  font-size: 30px;
+}
+
+.social a {
+  background: gray;
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social a i {
+  color: white;
+  padding-left: 2px;
+  font-size: 39px;
+}
+
+@media screen and (min-width: 600px) {
+  .footer-right > * {
+    flex: 1;
+  }
+  .footer-left {
+    flex: 1 0px;
+  }
+  .footer-right {
+    flex: 2 0px;
+  }
+}
+
+.box li :hover {
+  color: black;
+  transition: 0.6s;
+  margin-left: 10px;
+}
+
+@media screen and (min-width: 600px) {
+  .footer-right > * {
+    flex: 1;
+  }
+  .footer-left {
+    flex: 1 0px;
+  }
+  .footer-right {
+    flex: 2 0px;
+  }
+}
+
+@media (max-width: 600px) {
+  .footer {
+    padding: 15px;
+  }
+  main {
+    font-size: 50px;
+  }
+}

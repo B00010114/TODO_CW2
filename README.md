@@ -18,7 +18,7 @@ or just download the .zip file.
 
 You can also view the project on : 
 ```bash
-Glitch [https://large-quickest-raft.glitch.me]
+Glitch [https://shiny-lacy-daisy.glitch.me/]
 ```
 In order to run the project locally:
 ```bash
@@ -35,6 +35,6 @@ The app is dependent on:
 Link to githup repository: 
 [https://github.com/B00010114/TODO_CW2]
 Link to Glitch:
-[]
+[https://shiny-lacy-daisy.glitch.me/]
 
 

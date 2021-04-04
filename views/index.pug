@@ -1,0 +1,38 @@
+extends layout 
+
+block content
+  .row
+    .col-md-4 
+      .card 
+        .card-header
+          h3 Add new list of to-do
+        .card-body 
+          form(action="/add", method="POST")
+            .form-group.mb-3
+              label(for='todo') Add your to-do:
+              input.form-control#todo(type='text', name="title")
+            input(type="submit", value="Add").btn.btn-outline-success.btn-lg    
+    .col-md-8 
+      table.table.table-primary.table-striped.table-hover
+        thead
+          tr 
+            th(scope='col') Check
+            th(scope='col') To-Do:
+            th(scope='col') Edit
+            th(scope='col') Delete
+        tbody
+          each todo in todos 
+            tr
+              th(scope='row')
+                label.container-main 
+                  input.input_check(type="checkbox")
+                  span.checkmark 
+              td 
+                p(href=`/add/${ todo.id }`).todo_data= todo.body
+              td
+                a(href=`/add/${ todo.id }/edit`).btn.btn-info.btn-lg 
+                  i.fas.fa-pen-square
+              td
+                a(href=`/add/${ todo.id }/delete`).btn.btn-danger.btn-lg 
+                  i.far.fa-trash-alt
+                              
